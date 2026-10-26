@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Disaster Relief Map - Emergency Resource Finder</title>
+
+    <!-- Website CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet Map CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Disaster Relief Map</h1>
+        <p>Emergency Resource Finder</p>
+    </header>
+
+    <main>
+
+        <!-- Welcome Section -->
+        <section id="welcome">
+            <h2>Find Emergency Help Near You</h2>
+
+            <p>
+                Explore hospitals, emergency shelters, food and water
+                distribution centers, and relief camps on an interactive map.
+            </p>
+
+            <p class="notice">
+                DEMONSTRATION ONLY: All listed resources, locations,
+                contact numbers, and availability statuses are sample data.
+                They are not verified emergency services.
+            </p>
+        </section>
+
+        <!-- Interactive Resource Categories -->
+        <section id="resources">
+            <h2>Emergency Resources</h2>
+
+            <p>Click a category card to filter the map.</p>
+
+            <div class="resource-list">
+
+                <article
+                    class="resource-card"
+                    data-category="hospital"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Show hospitals"
+                >
+                    <h3>🏥 Hospitals</h3>
+                    <p>Explore sample healthcare facilities.</p>
+                    <span>View hospitals →</span>
+                </article>
+
+                <article
+                    class="resource-card"
+                    data-category="shelter"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Show emergency shelters"
+                >
+                    <h3>🏠 Emergency Shelters</h3>
+                    <p>Explore sample temporary accommodation locations.</p>
+                    <span>View shelters →</span>
+                </article>
+
+                <article
+                    class="resource-card"
+                    data-category="food"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Show food and water centers"
+                >
+                    <h3>🍎 Food and Water</h3>
+                    <p>Explore sample food and drinking water centers.</p>
+                    <span>View food and water centers →</span>
+                </article>
+
+                <article
+                    class="resource-card"
+                    data-category="relief"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Show relief camps"
+                >
+                    <h3>🆘 Relief Camps</h3>
+                    <p>Explore sample relief support locations.</p>
+                    <span>View relief camps →</span>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Search and Category Filters -->
+        <section id="filters">
+            <h2>Find Emergency Resources</h2>
+
+            <div class="filter-controls">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by resource name..."
+                    aria-label="Search emergency resources"
+                >
+
+                <select
+                    id="categoryFilter"
+                    aria-label="Filter by category"
+                >
+                    <option value="all">All Categories</option>
+                    <option value="hospital">Hospitals</option>
+                    <option value="shelter">Emergency Shelters</option>
+                    <option value="food">Food and Water</option>
+                    <option value="relief">Relief Camps</option>
+                </select>
+
+            </div>
+
+            <p id="resultCount">Loading resources...</p>
+        </section>
+
+        <!-- Map Section -->
+        <section id="map-section">
+            <h2>Emergency Resource Map</h2>
+
+            <p>
+                Select a marker to view its demonstration information.
+                Drag the map to explore different areas.
+            </p>
+
+            <div id="map"></div>
+
+            <p class="map-note">
+                Map data © OpenStreetMap contributors.
+                Resource markers represent fictional demonstration records.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Disaster Relief Map | Student Web Development Project</p>
+        <p>For demonstration only. Not an official emergency service.</p>
+    </footer>
+
+    <!-- Leaflet Map JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Sample Resource Data -->
+    <script src="data.js"></script>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
